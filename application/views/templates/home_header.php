@@ -7,14 +7,16 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><?= $title ?></title>
 	<link rel="icon" type="image/png" href="<?= base_url('assets/img/lc.png') ?>">
-	<link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
+	<!-- <link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 	<!-- Custom styles for this template-->
-	<link href="<?= base_url('assets/css/sb-admin-2.min.css') ?>" rel="stylesheet">
+	<!-- <link href="<?= base_url('assets/css/sb-admin-2.min.css') ?>" rel="stylesheet"> -->
 	<link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<?= $this->session->flashdata('modal'); ?>
 </head>
 
 <body class="bg-me" style="background-image: url('<?= base_url("assets/img/bg.jpg") ?>');">
@@ -44,7 +46,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-fw fa-code"></i> Kelas Coding
+							<i class="fas fa-fw fa-code"></i> Kelas Programming
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="#">PHP</a>
@@ -56,7 +58,6 @@
 							<a class="dropdown-item" href="#">SQL</a>
 							<a class="dropdown-item" href="#">Bootstrap</a>
 							<a class="dropdown-item" href="#">Code Igniter</a>
-							<a class="dropdown-item" href="#">Laravel</a>
 							<a class="dropdown-item" href="#">Android</a>
 						</div>
 					</li>
@@ -66,18 +67,13 @@
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="#">Mikrotik</a>
-							<a class="dropdown-item" href="#">Cisco</a>
-							<a class="dropdown-item" href="#">CWP</a>
+							<a class="dropdown-item" href="#">Server</a>
 						</div>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
 							<i class="fas fa-fw fa-bolt"></i> Kelas IoT
 						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Arduino</a>
-							<a class="dropdown-item" href="#">Raspberry Pi</a>
-						</div>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -90,8 +86,22 @@
 					</li>
 				</ul>
 				<div class="form-inline my-2 my-lg-0">
-					<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#login"><i class="fas fa-fw fa-lock"></i>
-						Login</a>
+					<?php if ($this->session->userdata('admin')) : ?>
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									<i class="fas fa-fw fa-key"></i> Admin
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="<?= site_url('home/admin') ?>">Admin Page</a>
+									<a class="dropdown-item" href="<?= site_url('home/logout') ?>">Logout </a>
+								</div>
+							</li>
+						</ul>
+					<?php else : ?>
+						<a class="btn btn-primary" href="#" data-toggle="modal" data-target="#login"><i class="fas fa-fw fa-lock"></i>
+							Login</a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</nav>
