@@ -12,7 +12,7 @@ class Home extends CI_Controller
 	}
 	public function reg_calon()
 	{
-		$data['title'] = "Daftar";
+		$data['title'] = "Daftar Lombok Cyber";
 		$this->load->view('templates/home_header', $data);
 		$this->load->view('home/reg_calon');
 		$this->load->view('templates/home_footer');

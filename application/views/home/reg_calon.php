@@ -22,8 +22,8 @@
                         <label for="jk">Jenis Kelamin</label>
                         <select name="jk" id="jk" class="form-control">
                             <option value="">Pilih Jenis Kelamin</option>
-                            <option value="">Laki - laki</option>
-                            <option value="">Perempuan</option>
+                            <option value="L">Laki - laki</option>
+                            <option value="P">Perempuan</option>
                         </select>
                     </div>
                 </div>
@@ -34,8 +34,14 @@
                         <input type="email" name="email" id="email" class="form-control" placeholder="Example@email.com">
                     </div>
                     <div class="form-group">
-                        <label for="email">Bidang yang ingin digeluti</label>
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Example@email.com">
+                        <label for="bidang">Bidang yang ingin digeluti</label>
+                        <select name="bidang" id="bidang" class="form-control">
+                            <option value="">Pilih Bidang</option>
+                            <option value="Programming">Programming</option>
+                            <option value="Jaringan">Jaringan</option>
+                            <option value="Elektronika">Elektronika</option>
+                            <option value="Elektronika">Multimedia</option>
+                        </select>
                     </div>
                 </div>
             </div>

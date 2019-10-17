@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title><?= $title ?></title>
+	<link rel="icon" type="image/png" href="<?= base_url('assets/img/lc.png') ?>">
 	<link href="<?= base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
@@ -29,14 +30,12 @@
 					<li class="nav-item">
 						<a class="nav-link" href="<?= site_url('Home') ?>"><i class="fas fa-fw fa-home"></i> Beranda <span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#"><i class="fas fa-fw fa-code-branch"></i> Visi & Misi</a>
-					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="fas fa-fw fa-user"></i> Tentang
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Visi & Misi</a>
 							<a class="dropdown-item" href="#">Sejarah Lombok Cyber</a>
 							<a class="dropdown-item" href="#">Struktur Organisasi</a>
 							<div class="dropdown-divider"></div>
@@ -45,7 +44,7 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-fw fa-code"></i> Kelas
+							<i class="fas fa-fw fa-code"></i> Kelas Coding
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="#">PHP</a>
@@ -54,6 +53,39 @@
 							<a class="dropdown-item" href="#">CSS 3</a>
 							<a class="dropdown-item" href="#">C++</a>
 							<a class="dropdown-item" href="#">Python</a>
+							<a class="dropdown-item" href="#">SQL</a>
+							<a class="dropdown-item" href="#">Bootstrap</a>
+							<a class="dropdown-item" href="#">Code Igniter</a>
+							<a class="dropdown-item" href="#">Laravel</a>
+							<a class="dropdown-item" href="#">Android</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-fw fa-network-wired"></i> Kelas Jaringan
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Mikrotik</a>
+							<a class="dropdown-item" href="#">Cisco</a>
+							<a class="dropdown-item" href="#">CWP</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-fw fa-bolt"></i> Kelas IoT
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Arduino</a>
+							<a class="dropdown-item" href="#">Raspberry Pi</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-fw fa-image"></i> Kelas Multimedia
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Photoshop</a>
+							<a class="dropdown-item" href="#">Corel Draw </a>
 						</div>
 					</li>
 				</ul>
